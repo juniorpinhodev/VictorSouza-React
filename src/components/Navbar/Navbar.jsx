@@ -1,6 +1,8 @@
 import React from 'react';
 import { MdMenu } from 'react-icons/md';
 import { SlEarphones } from 'react-icons/sl';
+import { UpdateFollower } from 'react-mouse-follower';
+import { motion } from 'framer-motion';
 
 const NavbarMenu = [
   {
@@ -29,7 +31,12 @@ const Navbar = () => {
   return (
     <>
     <div className='bg-brandDark text-white py-8 font-varela'>
-    <nav className='container flex justify-between items-center'>
+    <motion.nav 
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}  
+      className='container flex justify-between items-center'
+    >    
 
     {/* Logo section */}
     <div>
@@ -39,10 +46,19 @@ const Navbar = () => {
     {/* Menu section */}
     <div className='hidden md:block'>
       <ul className='flex items-center gap-4'>
-        {
-          NavbarMenu.map((item) => (
+        {NavbarMenu.map((item) => (
             <li key={item.id}>
-              <a href={item.link} className='inline-block text-sm py-2 px-3 uppercase'>{item.title}</a>
+              <UpdateFollower
+                mouseOptions={{
+                  backgroundColor: 'white',
+                  zIndex: 1000,
+                  followSpeed: 1.6,
+                  scale: 5,
+                  mixBlendMode: 'difference',
+                }}
+              >
+                <a href={item.link} className='inline-block text-sm py-2 px-3 uppercase'>{item.title}</a>
+              </UpdateFollower>
             </li>
         ))}
       </ul>
@@ -52,7 +68,7 @@ const Navbar = () => {
     <div className='md:hidden'>
       <MdMenu className='text-4xl'/>
     </div>
-  </nav>
+  </motion.nav>
   </div>
   </>
   );
