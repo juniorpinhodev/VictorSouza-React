@@ -39,7 +39,19 @@ const Navbar = () => {
 
     {/* Logo section */}
     <div>
-      <a href='#' className='text-xl font-bold uppercase'>Victor |{" "}<span className='font-extralight text-white/70'>Souza</span></a>
+      <UpdateFollower
+        mouseOptions={{
+          backgroundColor: 'white',
+          zIndex: 1000,
+          followSpeed: 1.6,
+          scale: 5,
+          mixBlendMode: 'difference',
+        }}
+      >
+        <a href='#' className='text-xl font-bold uppercase'>
+          Victor |{" "}<span className='font-extralight text-white/70'>Souza</span>
+        </a>
+      </UpdateFollower>
     </div>
 
     {/* Menu section */}
