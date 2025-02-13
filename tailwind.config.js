@@ -4,8 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#FF6363',
-        brandDark: '#111',
+        primary: '#2b9de6',
+        primaryDark: '#124175',
+        darkGray: '#1a1f25',
+        lightGray: '#272c35',
+        brandDark: '#1a1f25',
       },
 
       fontFamily: {

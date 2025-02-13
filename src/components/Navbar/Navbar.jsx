@@ -1,6 +1,5 @@
 import React from 'react';
 import { MdMenu } from 'react-icons/md';
-import { SlEarphones } from 'react-icons/sl';
 import { UpdateFollower } from 'react-mouse-follower';
 import { motion } from 'framer-motion';
 
