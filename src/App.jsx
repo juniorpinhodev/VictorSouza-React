@@ -1,11 +1,12 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
+import Services from './components/Services/Services'
 import { UpdateFollower } from 'react-mouse-follower'
 
 const App = () => {
   return (
-  <main className='overflow-x-hidden'>
+  <>
     <UpdateFollower
       mouseOptions={{
         backgroundColor: 'white',
@@ -14,9 +15,18 @@ const App = () => {
       }}
     >
       <Navbar />
-    <Hero />
+      <Hero />
     </UpdateFollower>
-  </main>
+    <UpdateFollower
+      mouseOptions={{
+          backgroundColor: 'black',
+          zIndex: 1000,
+          followSpeed: 1.6,
+        }}
+      >
+    <Services />
+    </UpdateFollower>
+  </>
   );
 };
 

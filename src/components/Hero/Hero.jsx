@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { UpdateFollower } from 'react-mouse-follower';
+import { FaArrowRight } from 'react-icons/fa';
 import BgImageCasa from '../../assets/BgImage.jpg';
 import VictorPng from '../../assets/Victor.png';
-import { FaArrowRight } from 'react-icons/fa';
 
 const bgImage = {
     backgroundImage: `url(${BgImageCasa})`,
@@ -16,8 +17,6 @@ const Hero = () => {
     <main style={bgImage}>
         <div className='bg-gradient-to-r from-primary to bg-primaryDark/90'>
             <div className='container text-white'>
-             
-
                 {/* Hero section */}
                 <section className='grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[800px]'>
                     {/* Texto */}
@@ -38,10 +37,20 @@ const Hero = () => {
                                 Victor <br /> {" "}<span className='text-transparent text-outline'>Souza</span>
                             </h1>
 
-                            <button className='outline-btn flex justify-center items-center gap-2 group'>
-                                Explore
-                                <FaArrowRight className='group-hover:translate-x-2 transition'/>  
-                            </button>
+                            <UpdateFollower
+                                mouseOptions={{
+                                    backgroundColor: 'white',
+                                    zIndex: 1000,
+                                    followSpeed: 1.6,
+                                    scale: 5,
+                                    mixBlendMode: 'soft-light',
+                                }}
+                            >
+                                <button className='outline-btn flex justify-center items-center gap-2 group'>
+                                    Explore
+                                    <FaArrowRight className='group-hover:translate-x-2 transition'/>  
+                                </button>
+                            </UpdateFollower>
                         </motion.div>
 
                         {/* Investidor imobiliário */}
@@ -66,18 +75,28 @@ const Hero = () => {
 
                     {/* Imagem */}
                     <div className='relative'>
-                        <motion.img 
-                            initial={{ opacity: 0, x: 200 }}
-                            whileInView={{ opacity: 1, x: 7, scale: 1 }}
-                            transition={{ duration: 1 }}
-                            src={VictorPng} 
-                            alt="" 
-                            className="w-full relative z-30 md:w-[200px] lg:w-[360px] h-auto"
-                            style={{
-                                WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 83%)',
-                                maskImage: 'linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%)'
-                            }} 
-                        />
+                        <UpdateFollower
+                            mouseOptions={{
+                                backgroundColor: 'white',
+                                zIndex: 1000,
+                                followSpeed: 1.6,
+                                scale: 5,
+                                mixBlendMode: 'soft-light',
+                            }}
+                        >
+                            <motion.img 
+                                initial={{ opacity: 0, x: 200 }}
+                                whileInView={{ opacity: 1, x: 7, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                src={VictorPng} 
+                                alt="" 
+                                className="w-full relative z-30 md:w-[200px] lg:w-[360px] h-auto"
+                                style={{
+                                    WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 83%)',
+                                    maskImage: 'linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%)'
+                                }} 
+                            />
+                        </UpdateFollower>
 
                         {/* Círculo com sombras */}
                         <motion.div 
@@ -107,7 +126,25 @@ const Hero = () => {
                             className='absolute -top-40 left-0 z-[1]'
                         >
                             <h1 className='text-[180px] font-bold text-cyan-200/10 leading-none'>Victor</h1>
+                            
                         </motion.div>
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, x: 227, y: 106 }}
+                            transition={{ 
+                                type: 'spring',
+                                stiffness: 100,
+                                duration: 0.8,
+                                damping: 10,
+                                delay: 1.6,
+                            }}
+                            className='absolute -top-40 left-0 z-[1]'
+                        >
+                            <h1 className='text-[180px] font-bold text-cyan-200/10 leading-none'>Souza</h1>
+                            
+                        </motion.div>
+                        
                     </div>
                 </section>
             </div>
