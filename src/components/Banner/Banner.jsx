@@ -65,7 +65,7 @@ const Banner = () => {
                 initial={{ opacity: 0, x: -100,}}
                 whileInView={{ opacity: 1, x: 0, rotate: 0}}
                 transition={{ duration: 0.8, delay: 1, ease: "easeInOut"}}
-                className= "FaArrowRight border-2 border-[#2b9de6] text-[#2b9de6] px-6 py-2 rounded-md hover:bg-[#2b9de6] hover:text-white"
+                className= "font-varela border-2 border-[#2b9de6] text-[#2b9de6] px-6 py-2 rounded-md hover:bg-[#2b9de6] hover:text-white"
                 >
                   Clique
                 </motion.button>
