@@ -9,29 +9,29 @@ import BlogCard4 from '../../assets/blogs/blog4.jpg';
 const BlogsData = [
     {
         id: 1,
-        title: 'Lorem ipsum dolor sit amet consectetur elit.',
-        desc: 'Lorem ipsum dolor sit amet consectetur elit. Quisquam, voluptate.',
+        title: 'Como identificar as melhores oportunidades em leilões da Caixa',
+        desc: 'Aprenda as estratégias para encontrar imóveis com potencial de valorização em leilões bancários.',
         img: BlogCard1,
         link: '#',
     },
     {
         id: 2,
-        title: 'Lorem ipsum dolor sit amet consectetur elit.',
-        desc: 'Lorem ipsum dolor sit amet consectetur elit. Quisquam, voluptate.',
+        title: 'Os 5 erros mais comuns ao investir em imóveis de leilão',
+        desc: 'Evite prejuízos conhecendo as principais armadilhas que afetam investidores iniciantes.',
         img: BlogCard2,
         link: '#',
     },
     {
         id: 3,
-        title: 'Lorem ipsum dolor sit amet consectetur elit.',
-        desc: 'Lorem ipsum dolor sit amet consectetur elit. Quisquam, voluptate.',
+        title: 'Guia completo: Da arrematação à reforma do imóvel',
+        desc: 'Passo a passo para transformar uma propriedade arrematada em leilão em um excelente investimento.',
         img: BlogCard3,
         link: '#',
     },
     {
         id: 4,
-        title: 'Lorem ipsum dolor sit amet consectetur elit.',
-        desc: 'Lorem ipsum dolor sit amet consectetur elit. Quisquam, voluptate.',
+        title: 'Como calcular o potencial de valorização de um imóvel',
+        desc: 'Métodos práticos para avaliar o retorno sobre investimento em propriedades de leilão.',
         img: BlogCard4,
         link: '#',
     },
@@ -40,7 +40,7 @@ const BlogsData = [
 const Blogs = () => {
     return (
         <>
-            <section className='bg-gray-50'>
+            <section className='bg-gray-100'>
                 <div className='container py-14'>
                     <h1 className='text-3xl font-bold text-center font-poppins m-8'>
                         Blogs

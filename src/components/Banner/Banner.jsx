@@ -7,7 +7,7 @@ import { UpdateFollower } from 'react-mouse-follower';
 const Banner = () => {
   return (
     <section>
-      <div className="container py-14">
+      <div className="container py-6">
         <div className="flex flex-row items-center gap-12">
           {/* Banner house img */}
           <div>
@@ -33,7 +33,7 @@ const Banner = () => {
                   damping: 6,
               }}
               className="text-3xl lg:text-4xl font-semibold font-poppins">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Transforme Leilões em Oportunidades de Investimento
               </motion.h1>
               <motion.p
               initial={{ opacity: 0, y: 100 }}
@@ -46,10 +46,7 @@ const Banner = () => {
                   damping: 6,
               }}
               >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-                quos minima quia unde quo suscipit delectus, commodi iure, ipsam
-                iste distinctio accusamus sequi rerum doloremque perferendis
-                veniam totam, dolorem impedit?
+                Descubra como investir de forma inteligente e segura em imóveis através de leilões. Com nossa expertise, você terá acesso a propriedades com alto potencial de valorização, suporte completo em todo o processo e estratégias comprovadas para maximizar seus resultados no mercado imobiliário.
               </motion.p>
              
               <UpdateFollower
